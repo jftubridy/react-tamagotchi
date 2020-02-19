@@ -19,24 +19,41 @@ class AttributeControl extends React.Component {
   handleHungerClick() {
     this.setState ({
       hunger: this.state.hunger + 5,
-      sleep: this.state.sleep - 3,
-      happiness: this.state.happiness-3
+      sleep: this.state.sleep - 2,
+      happiness: this.state.happiness-2
     });
   }
 
   handleSleepClick() {
     this.setState ({
-      hunger: this.state.hunger - 3,
+      hunger: this.state.hunger - 2,
       sleep: this.state.sleep + 5,
-      happiness: this.state.happiness-3
+      happiness: this.state.happiness-2
     });
   }
 
   handleHappinessClick() {
     this.setState ({
-      hunger: this.state.hunger - 3,
-      sleep: this.state.sleep - 3,
+      hunger: this.state.hunger - 2,
+      sleep: this.state.sleep - 2,
       happiness: this.state.happiness + 5
+    });
+  }
+
+  componentDidMount() {
+    this.attributeTimer = setInterval(() =>
+      this.handleAttributeTimer(),
+    2000
+    );
+  }
+
+    
+  handleAttributeTimer() {
+
+    this.setState({
+      hunger: this.state.hunger -2,
+      sleep: this.state.sleep - 2,
+      happiness: this.state.happiness-2
     });
   }
 

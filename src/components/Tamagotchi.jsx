@@ -7,6 +7,7 @@ function Tamagotchi(props) {
     <div>
       <h3>{props.name}</h3>
       <AttributeControl />
+      <h4>Alive for: {props.formattedWaitTime}</h4>
       <hr/>
     </div>
   );
