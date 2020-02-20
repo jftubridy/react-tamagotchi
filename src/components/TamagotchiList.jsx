@@ -9,9 +9,6 @@ function TamagotchiList(props){
       <hr/>
       {props.tamagotchiList.map((tamagotchi) =>
         <Tamagotchi name={tamagotchi.name}
-          health ={tamagotchi.health}
-          sleep = {tamagotchi.sleep}
-          happiness = {tamagotchi.happiness}
           formattedWaitTime = {tamagotchi.formattedWaitTime} 
           key={tamagotchi.id}/>
       )}
